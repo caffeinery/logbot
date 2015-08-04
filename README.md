@@ -6,10 +6,11 @@ _simple real-time irc logbot crafted with [coffea](https://github.com/caffeinery
 
 ## Setup
 
- * [Download logbot via zip from github](https://github.com/caffeinery/logbot/archive/master.zip) or run `git clone https://github.com/caffeinery/logbot`.
- * Change into the directory: `cd logbot`
+ * [Install meteor](https://www.meteor.com/install) (run `curl https://install.meteor.com/ | sh` on OS X and Linux)
+ * [Download logbot via zip from github](https://github.com/caffeinery/logbot/archive/master.zip) (or run `git clone https://github.com/caffeinery/logbot`)
+ * Change into the directory (run `cd logbot`)
  * Create a `settings.json` file (see Configuration section below)
- * Run via `meteor --settings settings.json`
+ * Run logbot via `meteor --settings settings.json`
  * Access http://localhost:3000 to see the logs in real-time
 
 ## Configuration
