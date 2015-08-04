@@ -2,11 +2,11 @@
 
 _simple real-time irc logbot crafted with [coffea](https://github.com/caffeinery/coffea/)_
 
-![logbot screenshot](https://i.imgur.com/edQOoaq.png)
+![logbot screenshot](https://i.imgur.com/snlTV3s.png)
 
 ## Setup
 
- * Download logbot via zip from github or run `git clone https://github.com/caffeinery/logbot`.
+ * [Download logbot via zip from github](https://github.com/caffeinery/logbot/archive/master.zip) or run `git clone https://github.com/caffeinery/logbot`.
  * Change into the directory: `cd logbot`
  * Create a `settings.json` file (see Configuration section below)
  * Run via `meteor --settings settings.json`
