@@ -1,0 +1,16 @@
+body {
+	margin: 20px !important;
+}
+
+.log td {
+	border: 0 !important;
+	padding: 0 5px !important;
+}
+
+.timestamp, .network, .channel {
+	color: gray;
+}
+
+.nick {
+	font-weight: bold;
+}
