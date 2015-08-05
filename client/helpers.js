@@ -24,6 +24,11 @@ Template.body.helpers({
   },
 
   version: function () {
+    var v = Meteor.settings.public.version.split('.');
+    return (v.length >= 2) ? v[0] + '.' + v[1] : Meteor.settings.public.version;
+  },
+
+  fullVersion: function () {
     return Meteor.settings.public.version;
   }
 });
