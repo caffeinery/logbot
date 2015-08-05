@@ -41,6 +41,9 @@ Template.body.events({
   },
   'click #showMoreButton': function () {
     Session.set('logsLimit', Session.get('logsLimit') + LIMIT);
+  },
+  'keyup #main': function () {
+    window.location.hash = '#' + document.getElementById('main').value;
   }
 });
 
@@ -55,3 +58,14 @@ Deps.autorun(function () {
   Meteor.subscribe('logs', Session.get('order'), Session.get('logsLimit'));
   Meteor.subscribe('logsCount');
 });
+
+function updateInput() {
+  if (window.location.hash.length > 0) {
+    var search = window.location.hash.slice(1);
+    document.getElementById('main').value = search;
+    instance.search(search);
+  }
+}
+
+window.onhashchange = updateInput;
+window.onload = updateInput;
