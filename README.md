@@ -2,7 +2,7 @@
 
 _simple real-time irc logbot crafted with [coffea](https://github.com/caffeinery/coffea/)_
 
-![logbot screenshot](https://i.imgur.com/9DSgGEO.png)
+![logbot screenshot](https://i.imgur.com/Vqx0Pze.png)
 
 ## Setup
 
