@@ -1,0 +1,67 @@
+body {
+	margin: 20px !important;
+}
+
+h1 {
+	margin-right: 10px;
+	white-space: nowrap;
+}
+
+h1 .label {
+	position: relative;
+	bottom: 5px;
+}
+
+.content {
+	margin-top: 85px;
+}
+
+.footer {
+	padding-bottom: 20px;
+}
+
+.menu, .searchbar, .input {
+	width: 100%;
+}
+
+.order {
+	margin-left: 10px !important;
+}
+
+.log td {
+	border: 0 !important;
+	padding: 0 10px !important;
+}
+
+.timestamp, .network, .channel {
+	color: gray;
+}
+
+.nick {
+	font-weight: bold;
+}
+
+.search {
+	margin-bottom: 20px !important;
+}
+
+@media (max-width: 1050px) {
+	h1 .label {
+		display: none !important;
+	}
+}
+
+@media (max-width: 680px) {
+	.header {
+		display: none !important;
+	}
+
+	.timestamp {
+		font-size: 10px;
+	}
+
+	.log td {
+		border: 0 !important;
+		padding: 0 5px !important;
+	}
+}

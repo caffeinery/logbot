@@ -2,7 +2,7 @@
 
 _simple real-time irc logbot crafted with [coffea](https://github.com/caffeinery/coffea/)_
 
-![logbot screenshot](https://i.imgur.com/snlTV3s.png)
+![logbot screenshot](https://i.imgur.com/9DSgGEO.png)
 
 ## Setup
 
@@ -44,3 +44,29 @@ Multiple networks can be specified too:
   }
 ]
 ```
+
+A limit (default: *25*) can be specified:
+
+```javascript
+{
+  "public": {
+    "limit": 10,
+  },
+  "networks": [
+    {
+      "name": "test",
+      "host": "192.168.99.100",
+      "port": 32782,
+      "channels": ["#foo", "#bar", "#baz"]
+    },
+    {
+      "name": "freenode",
+      "host": "chat.freenode.net",
+      "port": "6667",
+      "channels": ["#caffeinery"]
+    }
+  ]
+}
+```
+
+**Note:** If `networks` is defined in the config, it will be used as network configuration instead of using the whole config.

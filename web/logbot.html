@@ -1,0 +1,71 @@
+<head>
+  <title>logbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="ui {{#if isSearching}}loading {{/if}}search">
+
+      <div class="ui top fixed menu">
+        <div class="item header">
+          <h1>logbot <span class="ui label">v{{version}}</span></h1>
+        </div>
+        <div class="item searchbar">
+          <div class="ui left icon input">
+            {{> esInput id="main" class="prompt" index="logs" placeholder="Enter network, channel or nick to filter..." }}
+            <i class="search icon"></i>
+            <button id="orderButton" class="ui icon button order">
+              <i class="angle {{#if order}}down{{else}}up{{/if}} icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <table class="ui unstackable very basic table logs">
+        {{#ifEsInputIsEmpty id="main" index="logs"}}
+          {{#each logs}}
+            {{> log}}
+          {{/each}}
+        {{else}}
+          {{#esEach id="main" index="logs"}}
+            {{> log}}
+          {{/esEach}}
+        {{/ifEsInputIsEmpty}}
+        </table>
+
+        {{#ifEsHasNoResults id="main" index="logs"}}
+        <div class="ui warning message">
+          <div class="header">
+            Sorry!
+          </div>
+          <p>My tiny little robots couldn't find anything related to your input.</p>
+        </div>
+        {{/ifEsHasNoResults}}
+
+        {{> esLoadMoreButton class="ui button" id="main" index="logs"}}
+        {{#ifEsInputIsEmpty id="main" index="logs"}}
+          {{#if moreResults}}
+          <button id="showMoreButton" class="ui button">Load more</button>
+          {{/if}}
+        {{/ifEsInputIsEmpty}}
+      </div>
+
+    </div>
+
+    <div class="ui divider"></div>
+
+    <small class="footer">logbot v{{version}} crafted with <i class="red heart icon"></i> by <a href="https://github.com/omnidan">omnidan</a></small>
+  </div>
+</body>
+ 
+<template name="log">
+  <tr class="log">
+  	<td class="left aligned collapsing timestamp">{{timestamp}}</td>
+  	<td class="left aligned collapsing network">{{network}}</td>
+  	<td class="left aligned collapsing channel">{{channel}}</td>
+  	<td class="left aligned collapsing nick">{{nick}}</td>
+  	<td class="left aligned message">{{message}}</td>
+  </tr>
+</template>
