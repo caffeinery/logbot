@@ -74,4 +74,4 @@ A limit (default: *25*) can be specified:
 
 ## Special Thanks
 
-Special thanks to @dannvix (https://github.com/dannvix/Logbot) for inspiration and @jasonodoom for sharing this project with me.
+Special thanks to [dannvix](https://github.com/dannvix) (https://github.com/dannvix/Logbot) for inspiration and [jasonodoom](https://github.com/jasonodoom) for sharing this project with me.
