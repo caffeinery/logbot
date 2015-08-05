@@ -31,10 +31,15 @@ h1 .label {
 .log td {
 	border: 0 !important;
 	padding: 0 10px !important;
+	vertical-align: top;
 }
 
 .timestamp, .network, .channel {
 	color: gray;
+}
+
+.message {
+	min-width: 500px;
 }
 
 .nick {

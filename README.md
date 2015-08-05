@@ -70,3 +70,8 @@ A limit (default: *25*) can be specified:
 ```
 
 **Note:** If `networks` is defined in the config, it will be used as network configuration instead of using the whole config.
+
+
+## Special Thanks
+
+Special thanks to @dannvix (https://github.com/dannvix/Logbot) for inspiration and @jasonodoom for sharing this project with me.
