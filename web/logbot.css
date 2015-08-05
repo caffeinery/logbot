@@ -45,6 +45,19 @@ h1 .label {
 	margin-bottom: 20px !important;
 }
 
+.content {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.logs {
+	width: 100%;
+}
+
+.showMore {
+	margin-top: 10px;
+}
+
 @media (max-width: 1050px) {
 	h1 .label {
 		display: none !important;
@@ -58,6 +71,10 @@ h1 .label {
 
 	.timestamp {
 		font-size: 10px;
+	}
+
+	.content {
+		margin-top: 65px;
 	}
 
 	.log td {

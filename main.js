@@ -1,6 +1,6 @@
 Logs = new Mongo.Collection("logs");
 
-VERSION = "0.3.0";
+VERSION = "0.3.1";
 
 LIMIT = (Meteor.settings && Meteor.settings.public) ? Meteor.settings.public.limit : 0;
 LIMIT = (LIMIT > 0) ? LIMIT : 25;

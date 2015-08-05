@@ -43,7 +43,9 @@
           <p>My tiny little robots couldn't find anything related to your input.</p>
         </div>
         {{/ifEsHasNoResults}}
+      </div>
 
+      <div class="showMore">
         {{> esLoadMoreButton class="ui button" id="main" index="logs"}}
         {{#ifEsInputIsEmpty id="main" index="logs"}}
           {{#if moreResults}}
