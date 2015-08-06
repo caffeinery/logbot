@@ -5,11 +5,10 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
+
 meteorhacks:npm
-
-
 npm-container
+
 semantic:ui-css
 matteodem:easy-search
 tmeasday:publish-counts
