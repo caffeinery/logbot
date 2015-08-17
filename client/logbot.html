@@ -42,6 +42,18 @@
       </div>
 
       <div class="content">
+
+        {{#if order}}
+        <div class="showMore top">
+          {{> esLoadMoreButton class="ui button" id="main" index="logs"}}
+          {{#ifEsInputIsEmpty id="main" index="logs"}}
+            {{#if moreResults}}
+            <button id="showMoreButton" class="ui button">Load more</button>
+            {{/if}}
+          {{/ifEsInputIsEmpty}}
+        </div>
+        {{/if}}
+
         <table class="ui unstackable very basic table logs">
         {{#ifEsInputIsEmpty id="main" index="logs"}}
           {{#each logs}}
@@ -62,17 +74,20 @@
           <p>My tiny little robots couldn't find anything related to your input.</p>
         </div>
         {{/ifEsHasNoResults}}
-      </div>
 
-      <div class="showMore">
-        {{> esLoadMoreButton class="ui button" id="main" index="logs"}}
-        {{#ifEsInputIsEmpty id="main" index="logs"}}
-          {{#if moreResults}}
-          <button id="showMoreButton" class="ui button">Load more</button>
-          {{/if}}
-        {{/ifEsInputIsEmpty}}
-      </div>
+        {{#if order}}
+        {{else}}
+        <div class="showMore">
+          {{> esLoadMoreButton class="ui button" id="main" index="logs"}}
+          {{#ifEsInputIsEmpty id="main" index="logs"}}
+            {{#if moreResults}}
+            <button id="showMoreButton" class="ui button">Load more</button>
+            {{/if}}
+          {{/ifEsInputIsEmpty}}
+        </div>
+        {{/if}}
 
+      </div>
     </div>
 
     <div class="ui divider"></div>

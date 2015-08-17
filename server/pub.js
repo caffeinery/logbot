@@ -1,6 +1,6 @@
 function getLogs(order, limit) {
   return Logs.find({}, {
-  	sort: {createdAt: order ? 1 : -1},
+  	sort: {createdAt: -1},
   	limit: limit
   });
 }

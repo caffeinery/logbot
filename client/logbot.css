@@ -63,6 +63,10 @@ h1 .label {
 	margin-top: 10px;
 }
 
+.showMore, .top {
+    margin-top: 0;
+}
+
 @media (max-width: 1050px) {
 	h1 .label {
 		display: none !important;
