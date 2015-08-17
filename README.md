@@ -11,7 +11,7 @@ _simple real-time irc logbot crafted with [coffea](https://github.com/caffeinery
  * Change into the directory (run `cd logbot`)
  * Create a `settings.json` file (see Configuration section below)
  * Run logbot via `meteor --settings settings.json`
- * Access http://localhost:3000 to see the logs in real-time
+ * Access [http://localhost:3000](http://localhost:3000) to see the logs in real-time
 
 ## Configuration
 
